@@ -30,6 +30,8 @@
 		<link rel="shortcut icon" href="images/bard.jpg" type="image/x-icon">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -135,10 +137,19 @@
 					<div class="content">
 						<header>
 							<h2>The domain is for sell</h2>
-							<p>To purchase the domain solve the following puzzle to contact the current owner</p>
+							<p>To purchase the domain contact the current owner</p>
 						</header>
-						<p>I am a three letter synonym for purchase ending with y. Add @googlebard.fyi to me and you have my email id.</p>
+
+						<form action="mailto:buy@googlebard.fyi">
+							<label for="name">Name:</label><input type="text" id="name" name="name" required>
+							<label for="email">Email:</label><input type="email" id="email" name="email" required>
+							<label for="message">Why do you want to buy this domain and what is your bidding price?</label>
+							<textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+							<div class="cf-turnstile" data-sitekey="0x4AAAAAAAEPw7_1VOrhR4Rq"></div>
+							<button type="submit" value="Submit">Send an email</button>
+						</form>
 					</div>
+
 					<a href="#four" class="goto-next scrolly">Next</a>
 				</section>
 
